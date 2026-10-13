@@ -1,15 +1,14 @@
-import react from '@vitejs/plugin-vue'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [react()],
   server: {
+    host: '0.0.0.0',
     port: 5173,
-    open: true,
+    open: false,
   },
   build: {
     target: 'esnext',
     outDir: 'dist',
     sourcemap: false,
   },
-})
+});
